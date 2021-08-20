@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+        .main{
+            display: block;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.33;
+            text-align: center;
+            font-family: 'Verdana';
+            }
+
+    </style>
+</head>
+<body>
+        <div class="main">
+            <table class="taible">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for email in emails %}
+                    <tr>
+                        <th>{{ email.id }}</th>
+                        <td>{{ email.email }}</td>
+                        <td>{{ email.fullname }}</td>
+                        <td>{{ email.company_name }}</td>
+                        <td>{{ email.phone_number }}</td>
+                        <td>{{ email.note }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>
